@@ -1,7 +1,9 @@
 from flask import Flask, request, jsonify
 import util
+from flask_cors import CORS, cross_origin
 
 app = Flask(__name__)
+CORS(app)
 
 
 @app.route('/get_location_names', methods=['GET'])
